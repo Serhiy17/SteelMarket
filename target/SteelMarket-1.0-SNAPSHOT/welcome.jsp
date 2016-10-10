@@ -12,12 +12,9 @@
 </head>
 <body>
     <div style = "text-align:center">
-        <h1>Welcome</h1><br>
-        <a href = "index"></a><br>
-        <a href = "person">Sing In</a><br>
-        <a href = "address">Please specify your address</a><br>
-        <a href = "profile">Please specify all metal profile</a><br> <%--onli for admin--%>
-        <a href = "orders">Make order</a><br>
+        <a href = "signUp">SignUp</a><br>
+        <a href = "signOut">SignOut</a><br>
+        <a href = "registration">Registration</a><br>
     </div>
 </body>
 </html>

@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class PersonServlet extends HttpServlet{
 
@@ -27,26 +24,21 @@ public class PersonServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-
-
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("primary");
-        EntityManager manager = factory.createEntityManager();
-        manager.getTransaction().begin();
-
         String name = req.getParameter("name");
         String surName = req.getParameter("surName");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-        String balanse = req.getParameter("balanse");
 
-        manager.persist(new Person(name, surName, email, password, Double.parseDouble(balanse)));
+        Person person = new Person(name, surName, email, password);
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("primary");
+        EntityManager manager = factory.createEntityManager();
+        manager.getTransaction().begin();
+
+        manager.persist(person);
 
         manager.getTransaction().commit();
         manager.close();
         factory.close();
-
-        //req.setAttribute("allCommodities", persons);
-//	System.out.println(name + " " + price + " " + weight);
 
         req.getRequestDispatcher("index.jsp").forward(req, resp);
 

@@ -22,10 +22,6 @@ public class ProfileServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("primary");
-        EntityManager manager = factory.createEntityManager();
-            manager.getTransaction().begin();
-
         String typeOfProfile = req.getParameter("typeOfProfile");
         String dimensions = req.getParameter("dimensions");
         String weight = req.getParameter("weight");
@@ -33,15 +29,19 @@ public class ProfileServlet extends HttpServlet{
         String price = req.getParameter("price");
         String gost = req.getParameter("gost");
 
-        manager.persist(new MetalProfile(typeOfProfile, dimensions, Double.parseDouble(weight),
-                Double.parseDouble(length), Double.parseDouble(price), gost));
+        MetalProfile metalProfile = new MetalProfile(typeOfProfile, dimensions, Double.parseDouble(weight),
+                Double.parseDouble(length), Double.parseDouble(price), gost);
+
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("primary");
+        EntityManager manager = factory.createEntityManager();
+
+        manager.getTransaction().begin();
+
+        manager.persist(metalProfile);
 
         manager.getTransaction().commit();
         manager.close();
         factory.close();
-
-    //req.setAttribute("allCommodities", persons);
-    //	System.out.println(name + " " + price + " " + weight);
 
         req.getRequestDispatcher("index.jsp").forward(req, resp);
 

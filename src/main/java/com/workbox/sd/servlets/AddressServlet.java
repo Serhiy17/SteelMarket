@@ -24,25 +24,22 @@ public class AddressServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-
-
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("primary");
-        EntityManager manager = factory.createEntityManager();
-        manager.getTransaction().begin();
-
         String sity = req.getParameter("sity");
         String street = req.getParameter("street");
         String number = req.getParameter("number");
         String zipCode = req.getParameter("zipCode");
 
-        manager.persist(new Address(sity, street, Integer.parseInt(number), Integer.parseInt(zipCode)));
+        Address address = new Address(sity, street, Integer.parseInt(number), Integer.parseInt(zipCode));
+
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("primary");
+        EntityManager manager = factory.createEntityManager();
+        manager.getTransaction().begin();
+
+        manager.persist(address);
 
         manager.getTransaction().commit();
         manager.close();
         factory.close();
-
-        //req.setAttribute("allCommodities", persons);
-//	System.out.println(name + " " + price + " " + weight);
 
         req.getRequestDispatcher("index.jsp").forward(req, resp);
 

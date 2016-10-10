@@ -14,9 +14,8 @@ public class Person {
     private String surName;
     private String password;
     private String email;
-    private double balanse;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "person")
     private List<Orders> orders;
 
     @ManyToMany
@@ -29,12 +28,11 @@ public class Person {
 
     }
 
-    public Person(String name, String surName, String email, String password, double balanse) {
+    public Person(String name, String surName, String email, String password) {
         this.name = name;
         this.surName = surName;
         this.email = email;
         this.password = password;
-        this.balanse = balanse;
     }
 
     public int getId() {
@@ -77,14 +75,6 @@ public class Person {
         this.email = email;
     }
 
-    public double getBalanse() {
-        return balanse;
-    }
-
-    public void setBalanse(double balanse) {
-        this.balanse = balanse;
-    }
-
     public List<Orders> getOrders() {
         return orders;
     }
@@ -101,7 +91,6 @@ public class Person {
                 ", surName='" + surName + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", balanse=" + balanse +
                 '}';
     }
 }

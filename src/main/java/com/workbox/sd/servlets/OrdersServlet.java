@@ -25,23 +25,21 @@ public class OrdersServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
+        String totalPrice = req.getParameter("totalPrice");
+        double tp = Double.parseDouble(totalPrice);
+        Orders order = new Orders(tp);
+
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("primary");
         EntityManager manager = factory.createEntityManager();
         manager.getTransaction().begin();
 
-        String totalPrice = req.getParameter("totalPrice");
-//        req.setAttribute("allCommodities", persons);
-
-        manager.persist(new Orders(Double.parseDouble(totalPrice)));
+        manager.persist(order);
 
         manager.getTransaction().commit();
         manager.close();
         factory.close();
 
-        //req.setAttribute("allCommodities", persons);
-        //	System.out.println(name + " " + price + " " + weight);
-
-        req.getRequestDispatcher("index.jsp").forward(req, resp);
+//        req.getRequestDispatcher("index.jsp").forward(req, resp);
 
     }
 }

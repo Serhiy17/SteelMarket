@@ -18,7 +18,6 @@
         <input name = "surName" placeholder = "surName"><br><br>
         <input name = "email" placeholder = "email"><br><br>
         <input name = "password" placeholder = "password"><br><br>
-        <input name = "balanse" placeholder = "balanse"><br><br>
         <button>save parson</button>
 
     </form>

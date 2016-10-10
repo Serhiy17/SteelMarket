@@ -19,7 +19,7 @@ public class Orders {
     private double totalPrice;
 
     @ManyToOne
-    private Person user;
+    private Person person;
 
     @ManyToMany
     @JoinTable(name = "order_profile",
@@ -53,11 +53,11 @@ public class Orders {
     }
 
     public Person getUser() {
-        return user;
+        return person;
     }
 
     public void setUser(Person user) {
-        this.user = user;
+        this.person = user;
     }
 
     public List<MetalProfile> getCommodityes() {
