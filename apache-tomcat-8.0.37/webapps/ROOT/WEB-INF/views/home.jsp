@@ -4,11 +4,12 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Insert title here</title>
+    <title>Home</title>
 </head>
 <body>
 <div style="text-align: center; margin-top: 20%">
 
+    <a href="profile">PROFILE</a><br>
     <a href="signUp">SignUP</a><br>
     <a href="signOut">SignOUT</a><br>
     <a href="registration">REGISTRATION</a><br>

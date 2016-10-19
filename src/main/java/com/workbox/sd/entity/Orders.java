@@ -25,7 +25,7 @@ public class Orders {
     @JoinTable(name = "order_profile",
             joinColumns = @JoinColumn(name = "id_order"),
             inverseJoinColumns = @JoinColumn(name = "id_profile"))
-    private List<MetalProfile> metalProfiles;
+    private List<Profile> profiles;
 
     public Orders() {
         // TODO Auto-generated constructor stub
@@ -60,12 +60,12 @@ public class Orders {
         this.person = user;
     }
 
-    public List<MetalProfile> getCommodityes() {
-        return metalProfiles;
+    public List<Profile> getCommodityes() {
+        return profiles;
     }
 
-    public void setCommodityes(List<MetalProfile> chanels) {
-        this.metalProfiles = chanels;
+    public void setCommodityes(List<Profile> chanels) {
+        this.profiles = chanels;
     }
 
     @Override

@@ -9,12 +9,13 @@
 <html>
 <head>
     <title>Title</title>
+
 </head>
 <body>
     <div style="text-align: center; margin-top: 20%">
         <form action="saling" method = "post">
 
-            <input name = "name" placeholder = "name"><br><br>
+            <input name = "typeOfProfile" placeholder = "name"><br><br>
             <input name = "surName" placeholder = "surName"><br><br>
             <input name = "email" placeholder = "email"><br><br>
             <input name = "password" placeholder = "password"><br><br>
