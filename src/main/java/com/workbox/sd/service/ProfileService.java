@@ -10,7 +10,7 @@ public interface ProfileService {
 
     List<Profile> findAll();
 
-    Profile fintOne(int id);
+    Profile findOne(int id);
 
     void delete(int id);
 }

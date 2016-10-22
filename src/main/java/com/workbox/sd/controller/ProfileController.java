@@ -5,6 +5,7 @@ import com.workbox.sd.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,10 +16,10 @@ public class ProfileController {
     @Autowired
     private ProfileService profileService;
 
-    @RequestMapping(value="/profile", method= RequestMethod.GET)
+    @RequestMapping(value="/profileForAdmin", method= RequestMethod.GET)
     public String profilePage(Model model){
         model.addAttribute("profiles", profileService.findAll());
-        return "profile";
+        return "profileForAdmin";
     }
 
     @RequestMapping(value="/newProfile", method = RequestMethod.POST)
@@ -32,40 +33,72 @@ public class ProfileController {
         profileService.save(new Profile(typeOfProfile, dimensions, Double.parseDouble(weight),
                                 Double.parseDouble(length), Double.parseDouble(price), gost));
 
-        return "redirect:/profile";
+        return "redirect:/profileForAdmin";
     }
 
 
-/*    @RequestMapping(value="/del/{id}", method=RequestMethod.GET)
-    public String deleteIngradient(@PathVariable String id){
+    @RequestMapping(value="/del/{id}", method=RequestMethod.GET)
+    public String deleteProfile(@PathVariable String id){
 
-        ingradientService.delete(Integer.parseInt(id));
+        profileService.delete(Integer.parseInt(id));
 
-        return "redirect:/ingradient";
+        return "redirect:/profileForAdmin";
     }
 
 
-    @RequestMapping(value="/update/{id}", method=RequestMethod.GET)
-    public String updateIngradient(@PathVariable String id, Model model){
+    @RequestMapping(value="/updateAll/{id}", method=RequestMethod.GET)
+    public String updateProfile(@PathVariable String id, Model model){
 
-        Ingradient ingradient = ingradientService.findOne(Integer.parseInt(id));
+        Profile profile = profileService.findOne(Integer.parseInt(id));
 
-        model.addAttribute("ingradientForUpdate", ingradient);
+        model.addAttribute("profileForUpdate", profile);
 
-        return "updateIngradient";
+        return "updateProfileAll";
     }
 
-    @RequestMapping(value = "update/saveUpdateIngradient/{id}", method=RequestMethod.POST)
-    public String update(@PathVariable String id, @RequestParam String newName,
-                         @RequestParam String newAmount ){
+    @RequestMapping(value = "/updateAll/saveUpdateProfile/{id}", method=RequestMethod.POST)
+    public String update(@PathVariable String id, @RequestParam String newTypeOfProfile,
+                         @RequestParam String newDimensions,
+                         @RequestParam String newWeight,
+                         @RequestParam String newLength,
+                         @RequestParam String newPrice,
+                         @RequestParam String newGost ){
 
-        Ingradient ingradient = ingradientService.findOne(Integer.parseInt(id));
+        Profile profile = profileService.findOne(Integer.parseInt(id));
 
-        ingradient.setName(newName);
-        ingradient.setAmount(newAmount);
+        profile.setTypeOfProfile(newTypeOfProfile);
+        profile.setDimensions(newDimensions);
+        profile.setWeight(Double.parseDouble(newWeight));
+        profile.setLength(Double.parseDouble(newLength));
+        profile.setPrice(Double.parseDouble(newPrice));
+        profile.setGost(newGost);
 
-        ingradientService.save(ingradient);
+        profileService.save(profile);
 
-        return "redirect:/ingradient";*/
-/*    }*/
+        return "redirect:/profileForAdmin";
+    }
+
+
+    @RequestMapping(value="/updatePrice/{id}", method=RequestMethod.GET)
+    public String updateProfilePrice(@PathVariable String id, Model model){
+
+        Profile profile = profileService.findOne(Integer.parseInt(id));
+
+        model.addAttribute("profileForUpdatePrice", profile);
+
+        return "updateProfilePrice";
+    }
+
+    @RequestMapping(value = "/updatePrice/saveUpdateProfilePrice/{id}", method=RequestMethod.POST)
+    public String updatePrice(@PathVariable String id,
+                         @RequestParam String newPrice){
+
+        Profile profile = profileService.findOne(Integer.parseInt(id));
+
+        profile.setPrice(Double.parseDouble(newPrice));
+
+        profileService.save(profile);
+
+        return "redirect:/profileForAdmin";
+    }
 }

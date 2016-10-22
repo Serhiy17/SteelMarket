@@ -11,4 +11,13 @@ public class HomeController {
     public String home(Model model){
         return "home";
     }
+
+    @RequestMapping(value = "/delivery")
+    public String delivery(){return  "delivery";}
+
+    @RequestMapping(value = "/aboutUs")
+    public String aboutUs(){return  "aboutUs";}
+
+    @RequestMapping(value = "/contacts")
+    public String contacts(){return  "contacts";}
 }

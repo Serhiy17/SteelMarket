@@ -26,7 +26,7 @@ public class SignUpController {
     @RequestMapping(value="/checkPerson", method = RequestMethod.POST)
     public String checkPerson(@RequestParam String email,
                               @RequestParam String password){
-        Person person = new Person(null, null, email, password);
+        Person person = new Person(null, null, email, null, password);
 
         List<Person> list = personService.findAll();
 

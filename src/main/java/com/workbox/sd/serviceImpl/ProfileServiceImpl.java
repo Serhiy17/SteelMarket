@@ -22,7 +22,7 @@ public class ProfileServiceImpl implements ProfileService {
         return profileRepository.findAll();
     }
 
-    public Profile fintOne(int id) {
+    public Profile findOne(int id) {
         return profileRepository.findOne(id);
     }
 

@@ -12,8 +12,9 @@ public class Person {
 
     private String name;
     private String surName;
-    private String password;
     private String email;
+    private String phone;
+    private String password;
 
     @OneToMany(mappedBy = "person")
     private List<Orders> orders;
@@ -28,11 +29,20 @@ public class Person {
 
     }
 
-    public Person(String name, String surName, String email, String password) {
+    public Person(String name, String surName, String email, String phone, String password) {
         this.name = name;
         this.surName = surName;
         this.email = email;
+        this.phone = phone;
         this.password = password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public int getId() {
@@ -89,6 +99,8 @@ public class Person {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surName='" + surName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';
