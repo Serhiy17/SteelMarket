@@ -17,7 +17,7 @@
     <a href="delivery">доставка</a><br>
     <a href="contacts">контакти</a><br>
     <a href="aboutUs">про нас</a><br>
-    <a href="makeOrder">замовити</a><br>
+    <a href="orders">замовити</a><br>
 
 </div>
 

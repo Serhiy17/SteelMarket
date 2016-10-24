@@ -1,13 +1,6 @@
 package com.workbox.sd.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -21,19 +14,11 @@ public class Orders {
     @ManyToOne
     private Person person;
 
-    @ManyToMany
-    @JoinTable(name = "order_profile",
-            joinColumns = @JoinColumn(name = "id_order"),
-            inverseJoinColumns = @JoinColumn(name = "id_profile"))
-    private List<Profile> profiles;
+    @OneToMany(mappedBy = "orders")
+    private List<PieceOfOrder> pieceOfOrders;
 
     public Orders() {
         // TODO Auto-generated constructor stub
-    }
-
-    public Orders(double totalPrice) {
-        super();
-        this.totalPrice = totalPrice;
     }
 
     public int getId() {
@@ -45,6 +30,10 @@ public class Orders {
     }
 
     public double getTotalPrice() {
+
+        for(PieceOfOrder p : pieceOfOrders){
+            totalPrice += p.getPrice();
+        }
         return totalPrice;
     }
 
@@ -60,12 +49,12 @@ public class Orders {
         this.person = user;
     }
 
-    public List<Profile> getCommodityes() {
-        return profiles;
+    public List<PieceOfOrder> getPieceOfOrders() {
+        return pieceOfOrders;
     }
 
-    public void setCommodityes(List<Profile> chanels) {
-        this.profiles = chanels;
+    public void setPieceOfOrders(List<PieceOfOrder> pieceOfOrders) {
+        this.pieceOfOrders = pieceOfOrders;
     }
 
     @Override

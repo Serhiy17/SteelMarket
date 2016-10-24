@@ -20,13 +20,10 @@ public class Profile {
     private double price; //price of meter of material
     private String gost; //standards
 
-    @ManyToMany
-    @JoinTable(name = "order_profile",
-            joinColumns = @JoinColumn(name = "id_profile"),
-            inverseJoinColumns = @JoinColumn(name = "id_order"))
-    private List<Orders> orders;
+    @OneToMany(mappedBy = "profile")
+    private List<PieceOfOrder> pieceOfOrders;
 
-    Profile() {
+    public Profile() {
 
     }
 
@@ -95,12 +92,12 @@ public class Profile {
         this.gost = gost;
     }
 
-    public List<Orders> getOrders() {
-        return orders;
+    public List<PieceOfOrder> getPieceOfOrder() {
+        return pieceOfOrders;
     }
 
-    public void setOrders(List<Orders> orders) {
-        this.orders = orders;
+    public void setPieceOfOrder(List<PieceOfOrder> pieceOfOrders) {
+        this.pieceOfOrders = pieceOfOrders;
     }
 
     @Override

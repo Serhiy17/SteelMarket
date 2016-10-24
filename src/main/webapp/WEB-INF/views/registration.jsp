@@ -14,31 +14,26 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 <body>
-    <div style="text-align: center; margin-top: 10%">
+
+    <div class="testbox" style="text-align: center;" <%--margin-top: 10%"--%>>
+        <h1>Registration</h1>
         <sf:form modelAttribute="person" action="newPerson" method = "post">
 
             <label id="icon" for="name"><i class="icon-user "></i></label>
-            <sf:input path="name" type="text" name="name" id="name" placeholder="name" /><br>
+            <sf:input path="name" type="text" name="name" id="name" placeholder="name" />
             <label id="icon" for="name"><i class="icon-user "></i></label>
-            <sf:input path="surName" type="text" name="name" id="name" placeholder="surname" /><br>
+            <sf:input path="surName" type="text" name="name" id="name" placeholder="surname" />
             <label id="icon" for="name"><i class="icon-envelope"></i></label>
-            <sf:input path="email" type="text" name="name" id="name" placeholder="email" /><br>
+            <sf:input path="email" type="text" name="name" id="name" placeholder="email" />
+            <label id="icon" for="name"><i class="icon-phone"></i></label>
+            <sf:input path="phone" type="text" name="name" id="name" placeholder="phone" />
             <label id="icon" for="name"><i class="icon-shield"></i></label>
-            <sf:input path="phone" type="password" name="name" id="name" placeholder="phone" /><br>
-            <label id="icon" for="name"><i class="icon-shield"></i></label>
-            <sf:input path="password" type="password" name="name" id="name" placeholder="password" /><br>
+            <sf:input path="password" type="password" name="name" id="name" placeholder="password" />
 
-           <%-- <div style="text-align: center;">
-                <button class="button">Register</button>
-            </div>--%>
-
-            <div class="pure-controls">
-                <button type="save" class="pure-button pure-button-primary">Register</button>
-            </div>
+            <button class="button">Register</button>
 
         </sf:form>
-
-
     </div>
+
 </body>
 </html>

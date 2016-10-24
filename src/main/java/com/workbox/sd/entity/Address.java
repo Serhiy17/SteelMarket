@@ -21,7 +21,7 @@ public class Address {
             inverseJoinColumns = @JoinColumn(name = "id_address"))
     List<Person> persons;
 
-    Address(){
+    public Address(){
 
     }
 

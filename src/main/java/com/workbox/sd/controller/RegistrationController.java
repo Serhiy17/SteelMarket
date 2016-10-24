@@ -27,6 +27,6 @@ public class RegistrationController {
 
         personService.save(person);
 
-        return "/home";
+        return "home";
     }
 }
