@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.security.Principal;
+
 @Controller
 public class RegistrationController {
 
@@ -27,6 +29,34 @@ public class RegistrationController {
 
         personService.save(person);
 
-        return "home";
+        return "redirect:/";
+    }
+
+    @RequestMapping(value="/login", method=RequestMethod.GET)
+    public String login(){
+        return "loginpage";
+    }
+
+    @RequestMapping(value="/logout", method=RequestMethod.POST)
+    public String logout(){
+        return "redirect:/";
+    }
+
+    @RequestMapping(value="/home", method=RequestMethod.POST)
+    public String home(){
+        return "redirect:/";
+    }
+    @RequestMapping(value="/loginprocesing", method=RequestMethod.POST)
+    public String loginprocesing(){
+        return "redirect:/";
+    }
+
+    @RequestMapping(value="/getOrder", method=RequestMethod.GET)
+    public String getOrder(Principal principal){
+
+        Person person = personService.findOne(Integer.parseInt(principal.getName()));
+
+        System.out.println(person);
+        return "redirect:/";
     }
 }

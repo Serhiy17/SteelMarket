@@ -41,7 +41,6 @@ public class OrdersController {
     public String newOrders(@ModelAttribute PieceOfOrder pieceOfOrder,
                             @RequestParam String[] choosenProfile){
         Profile profile = null;
-//        List<Profile> profiles = new ArrayList<>();
         for(int i=0; i<choosenProfile.length; i++){
             profile = profileService.findOne(Integer.parseInt(choosenProfile[i]));
         }

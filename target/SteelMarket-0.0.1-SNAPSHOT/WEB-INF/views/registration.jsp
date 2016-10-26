@@ -20,7 +20,7 @@
         <sf:form modelAttribute="person" action="newPerson" method = "post">
 
             <label id="icon" for="name"><i class="icon-user "></i></label>
-            <sf:input path="name" type="text" name="name" id="name" placeholder="name" />
+            <sf:input path="username" type="text" name="name" id="name" placeholder="username" />
             <label id="icon" for="name"><i class="icon-user "></i></label>
             <sf:input path="surName" type="text" name="name" id="name" placeholder="surname" />
             <label id="icon" for="name"><i class="icon-envelope"></i></label>

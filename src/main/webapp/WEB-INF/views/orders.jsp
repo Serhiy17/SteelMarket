@@ -25,10 +25,10 @@
 </sf:form>
 
 <c:forEach var="ordersRun" items="${orderses }">
-    ${orderRun }
+    ${ordersRun }
 
     <c:forEach var="ord" items="${ordersRun.profile }">
-        ${ing.length }${ing.price }
+        ${ord.length }${ord.price }
     </c:forEach>
     <br>
 </c:forEach>
