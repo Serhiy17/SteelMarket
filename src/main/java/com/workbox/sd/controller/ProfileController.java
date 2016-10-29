@@ -16,9 +16,30 @@ public class ProfileController {
     @Autowired
     private ProfileService profileService;
 
+
+//    Rebar, LProfileEquilateral, LProfileNonEquilateral,
+    //    IBeamAdded, IBeamAngle, IBeamCol, IBeamNorm, IBeamWide,
+//    TBeamCol, TBeamWide, SquarePipe, RectangularPipe, CirclePipe,
+//    ChanelAngle, ChanelBend, ChanelParalel
+
     @RequestMapping(value="/profileForAdmin", method= RequestMethod.GET)
     public String profilePage(Model model){
-        model.addAttribute("profiles", profileService.findAll());
+        model.addAttribute("profiles", profileService.findAllRebar());
+        model.addAttribute("profiles", profileService.findAllLProfileEquilateral());
+        model.addAttribute("profiles", profileService.findAllLProfileNonEquilateral());
+        model.addAttribute("profiles", profileService.findAllIBeamAdded());
+        model.addAttribute("profiles", profileService.findAllIBeamAngle());
+        model.addAttribute("profiles", profileService.findAllIBeamCol());
+        model.addAttribute("profiles", profileService.findAllIBeamNorm());
+        model.addAttribute("profiles", profileService.findAllIBeamWide());
+        model.addAttribute("profiles", profileService.findAllTBeamCol());
+        model.addAttribute("profiles", profileService.findAllTBeamWide());
+        model.addAttribute("profiles", profileService.findAllSquarePipe());
+        model.addAttribute("profiles", profileService.findAllRectangularPipe());
+        model.addAttribute("profiles", profileService.findAllCirclePipe());
+        model.addAttribute("profiles", profileService.findAllChanelAngle());
+        model.addAttribute("profiles", profileService.findAllChanelBend());
+        model.addAttribute("profiles", profileService.findAllChanelParalel());
         return "profileForAdmin";
     }
 

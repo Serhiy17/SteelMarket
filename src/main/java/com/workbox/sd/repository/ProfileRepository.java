@@ -13,10 +13,10 @@ public interface ProfileRepository extends JpaRepository<Profile, Integer>{
 //    TBeamCol, TBeamWide, SquarePipe, RectangularPipe, CirclePipe,
 //    ChanelAngle, ChanelBend, ChanelParalel
 
-   /* @Query("select d from profile d where d.type ='LProfileNonEquilateral'")
+   @Query("select e from profile where e.typeOfProfile ='LProfileNonEquilateral'")
     List<Profile> findAllLProfileNonEquilateral();
 
-    @Query("select d from Profile d where d.type ='Rebar'")
+    @Query("select d from Profile d where d.typeOfProfile ='Rebar'")
     List<Profile> findAllRebar();
 
     @Query("select d from Profile d where d.type ='LProfileEquilateral'")
