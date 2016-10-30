@@ -22,6 +22,8 @@ public class Person implements UserDetails{
     private String phone;
     private String password;
 
+    private String pathImage;
+
     @Enumerated
     private Role role;
 
@@ -54,7 +56,7 @@ public class Person implements UserDetails{
         this.id = id;
     }
 
-    public void setName(String name) {
+    public void setUserame(String username) {
         this.username = username;
     }
 
@@ -104,6 +106,14 @@ public class Person implements UserDetails{
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getPathImage() {
+        return pathImage;
+    }
+
+    public void setPathImage(String pathImage) {
+        this.pathImage = pathImage;
     }
 
     @Override
