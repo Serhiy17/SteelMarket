@@ -18,8 +18,12 @@
     <a href="profileForAdmin">металічні профілі адмін</a><br>
     </sec:authorize>
 
+    <a href="home">Гловна</a>
+    <a href="registration">регістрація</a>
+    <a href="delivery">доставка</a>
+    <a href="contacts">контакти</a>
+    <a href="aboutUs">про нас</a><br>
     <a href="profileForCastomer">металічні профілі</a><br>
-    <a href="registration">регістрація</a><br>
     <a href="delivery">доставка</a><br>
     <a href="contacts">контакти</a><br>
     <a href="aboutUs">про нас</a><br>

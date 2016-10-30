@@ -11,7 +11,7 @@
 <body>
 
 <div style="text-align: center; margin: 10% auto; width: 800px;">
-    <a href="/">Home</a>
+    <a href="home">Гловна</a>
     <a href="registration">регістрація</a>
     <a href="delivery">доставка</a>
     <a href="contacts">контакти</a>

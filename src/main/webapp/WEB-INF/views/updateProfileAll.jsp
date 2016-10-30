@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -12,7 +12,7 @@
 
 <div style="text-align: center; margin-top: 10%">
 
-    <form class="pure-form pure-form-aligned" action="saveUpdateProfile/${profileForUpdate.id}" method = "post">
+    <sf:form class="pure-form pure-form-aligned" action="saveUpdateProfile/${profileForUpdate.id}" method = "post">
         <fieldset>
             <div class="pure-control-group">
                 <label for="typeOfProfile">Type Of Profile</label>
@@ -54,7 +54,7 @@
                 <button type="save" class="pure-button pure-button-primary">UPDATE</button>
             </div>
         </fieldset>
-    </form>
+    </sf:form>
 </div>
 </body>
 </html>
