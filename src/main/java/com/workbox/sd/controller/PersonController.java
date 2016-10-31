@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.security.Principal;
 
 @Controller
-public class RegistrationController {
+public class PersonController {
 
     @Autowired
     private PersonService personService;
@@ -26,13 +27,15 @@ public class RegistrationController {
 
     @RequestMapping(value="/newPerson", method = RequestMethod.POST)
     public String newPerson(@ModelAttribute Person person){
-
-        personService.save(person);
-
+        try {
+            personService.save(person);
+        }catch(Exception e){
+            return "error_username";
+        }
         return "redirect:/";
     }
 
-    @RequestMapping(value="/login", method=RequestMethod.GET)
+    @RequestMapping(value="/loginpage", method=RequestMethod.GET)
     public String login(){
         return "loginpage";
     }
@@ -45,6 +48,12 @@ public class RegistrationController {
     @RequestMapping(value="/home", method=RequestMethod.POST)
     public String home(){
         return "redirect:/";
+    }
+
+    @RequestMapping(value = "/saveImage", method = RequestMethod.POST)
+    public String saveImage(Principal principal, @RequestParam MultipartFile image){
+        personService.saveImage(principal, image);
+        return "registration";
     }
     @RequestMapping(value="/loginprocesing", method=RequestMethod.POST)
     public String loginprocesing(){

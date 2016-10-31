@@ -4,6 +4,7 @@ import com.workbox.sd.entity.Profile;
 import com.workbox.sd.repository.ProfileRepository;
 import com.workbox.sd.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,5 +29,10 @@ public class ProfileServiceImpl implements ProfileService {
 
     public void delete(int id) {
         profileRepository.delete(id);
+    }
+
+    @Override
+    public List<Profile> findByType(String type) {
+        return profileRepository.findAllByType(type);
     }
 }

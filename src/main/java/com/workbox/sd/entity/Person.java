@@ -130,6 +130,10 @@ public class Person implements UserDetails{
         return String.valueOf(id);
     }
 
+    public String getOriginUsername() {
+        return username;
+    }
+
     @Override
     public boolean isAccountNonExpired() {
         return true;

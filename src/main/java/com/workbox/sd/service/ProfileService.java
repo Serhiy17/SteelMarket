@@ -13,4 +13,6 @@ public interface ProfileService {
     Profile findOne(int id);
 
     void delete(int id);
+
+    List<Profile> findByType(String type);
 }

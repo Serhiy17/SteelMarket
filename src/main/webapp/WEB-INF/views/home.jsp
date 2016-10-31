@@ -30,7 +30,7 @@
     <a href="orders">замовити</a><br>
 
     <sec:authorize access="!isAuthenticated()">
-        <a href="login">SignUP</a>
+        <a href="loginpage">SignUP</a>
     </sec:authorize>
 
     <sf:form action="logout" method="post">
