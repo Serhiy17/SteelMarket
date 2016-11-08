@@ -1,7 +1,5 @@
 package com.workbox.sd.controller;
 
-import com.workbox.sd.entity.Orders;
-import com.workbox.sd.entity.Person;
 import com.workbox.sd.entity.PieceOfOrder;
 import com.workbox.sd.entity.Profile;
 import com.workbox.sd.service.OrdersService;
@@ -14,9 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class OrdersController {
@@ -54,7 +49,7 @@ public class OrdersController {
         model.addAttribute("profilesChanelBend", profileService.findByType("ChanelBend"));
         model.addAttribute("profilesChanelParalel", profileService.findByType("ChanelParalel"));
 
-        return "orders";
+        return "base/orders";
     }
 
     @RequestMapping(value="/newOrders", method = RequestMethod.POST)

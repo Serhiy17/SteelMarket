@@ -40,7 +40,7 @@ public class ProfileController {
 //        model.addAttribute("profiles", profileService.findAllChanelAngle());
 //        model.addAttribute("profiles", profileService.findAllChanelBend());
 //        model.addAttribute("profiles", profileService.findAllChanelParalel());
-        return "profileForAdmin";
+        return "base/profileForAdmin";
     }
 
     @RequestMapping(value="/newProfile", method = RequestMethod.POST)
@@ -74,7 +74,7 @@ public class ProfileController {
 
         model.addAttribute("profileForUpdate", profile);
 
-        return "updateProfileAll";
+        return "base/updateProfileAll";
     }
 
     @RequestMapping(value = "/updateAll/saveUpdateProfile/{id}", method=RequestMethod.POST)
@@ -107,7 +107,7 @@ public class ProfileController {
 
         model.addAttribute("profileForUpdatePrice", profile);
 
-        return "updateProfilePrice";
+        return "base/updateProfilePrice";
     }
 
     @RequestMapping(value = "/updatePrice/saveUpdateProfilePrice/{id}", method=RequestMethod.POST)

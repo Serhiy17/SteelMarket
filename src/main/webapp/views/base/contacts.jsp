@@ -11,11 +11,11 @@
 <body>
 
 <div style="text-align: center; margin: 5% auto; width: 800px;">
-    <a href="/">Home</a>
-    <a href="registration">регістрація</a>
-    <a href="delivery">доставка</a>
-    <a href="contacts">контакти</a>
-    <a href="aboutUs">про нас</a><br>
+    <%--<a href="home">Гловна</a>--%>
+    <%--<a href="registration">регістрація</a>--%>
+    <%--<a href="delivery">доставка</a>--%>
+    <%--<a href="contacts">контакти</a>--%>
+    <%--<a href="aboutUs">про нас</a><br>--%>
 
     <p>Львів-метал - весь спектр металопрокату</p><br>
     <p>Адреса: вул. Франка, 61, оф.503, Львів</p><br>

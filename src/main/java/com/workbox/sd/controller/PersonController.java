@@ -22,7 +22,7 @@ public class PersonController {
     @RequestMapping(value="/registration", method= RequestMethod.GET)
     public String newPersonPage(Model model){
         model.addAttribute("person", new Person());
-        return "registration";
+        return "base/registration";
     }
 
     @RequestMapping(value="/newPerson", method = RequestMethod.POST)
@@ -37,7 +37,7 @@ public class PersonController {
 
     @RequestMapping(value="/loginpage", method=RequestMethod.GET)
     public String login(){
-        return "loginpage";
+        return "base/loginpage";
     }
 
     @RequestMapping(value="/logout", method=RequestMethod.POST)
@@ -53,7 +53,7 @@ public class PersonController {
     @RequestMapping(value = "/saveImage", method = RequestMethod.POST)
     public String saveImage(Principal principal, @RequestParam MultipartFile image){
         personService.saveImage(principal, image);
-        return "registration";
+        return "base/registration";
     }
     @RequestMapping(value="/loginprocesing", method=RequestMethod.POST)
     public String loginprocesing(){
