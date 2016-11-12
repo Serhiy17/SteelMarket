@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
@@ -10,8 +10,9 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/resources/css/registration.css">
+
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link type="text/css" rel="stylesheet" href="/resources/css/registration.css">
 </head>
 <body>
 
@@ -20,7 +21,7 @@
         <sf:form modelAttribute="person" action="newPerson" method = "post">
 
             <label id="icon" for="name"><i class="icon-user "></i></label>
-            <sf:input path="username" type="text" name="name" id="name" placeholder="username" />
+            <input name="username" type="text" name="name" id="name" placeholder="username" />
             <label id="icon" for="name"><i class="icon-user "></i></label>
             <sf:input path="surName" type="text" name="name" id="name" placeholder="surname" />
             <label id="icon" for="name"><i class="icon-envelope"></i></label>
@@ -40,11 +41,11 @@
     <br>
     <img src="${person.pathImage}" height="100px" width="200px">
 
-    <form:form action="./saveImage?${_csrf.parameterName}=${_csrf.token}"
+    <sf:form action="./saveImage?${_csrf.parameterName}=${_csrf.token}"
                method="post" enctype="multipart/form-data">
         <input type="file" name="image">
         <button>save image</button>
-    </form:form>
+    </sf:form>
 
 </body>
 </html>

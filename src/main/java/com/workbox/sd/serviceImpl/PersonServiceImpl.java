@@ -73,12 +73,8 @@ public class PersonServiceImpl implements PersonService, UserDetailsService{
             file.mkdirs();
 
             try {
-                FileUtils.cleanDirectory(new File(System.getProperty("catalina.home") + "/resources/" + person.getOriginUsername() + "/"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                FileUtils.cleanDirectory(new File(System.getProperty("catalina.home") + "/resources/" + person.getOriginUsername() + "/"));
+                FileUtils.cleanDirectory(new File(System.getProperty("catalina.home") +
+                        "/resources/" + person.getOriginUsername() + "/"));
             } catch (IOException e) {
                 e.printStackTrace();
             }

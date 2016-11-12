@@ -24,23 +24,7 @@ public class ProfileController {
 
     @RequestMapping(value="/profileForAdmin", method= RequestMethod.GET)
     public String profilePage(Model model){
-//        model.addAttribute("profiles", profileService.findAll());
-//        model.addAttribute("profiles", profileService.findAllLProfileEquilateral());
-//        model.addAttribute("profiles", profileService.findAllLProfileNonEquilateral());
-//        model.addAttribute("profiles", profileService.findAllIBeamAdded());
-//        model.addAttribute("profiles", profileService.findAllIBeamAngle());
-//        model.addAttribute("profiles", profileService.findAllIBeamCol());
-//        model.addAttribute("profiles", profileService.findAllIBeamNorm());
-//        model.addAttribute("profiles", profileService.findAllIBeamWide());
-//        model.addAttribute("profiles", profileService.findAllTBeamCol());
-//        model.addAttribute("profiles", profileService.findAllTBeamWide());
-//        model.addAttribute("profiles", profileService.findAllSquarePipe());
-//        model.addAttribute("profiles", profileService.findAllRectangularPipe());
-//        model.addAttribute("profiles", profileService.findAllCirclePipe());
-//        model.addAttribute("profiles", profileService.findAllChanelAngle());
-//        model.addAttribute("profiles", profileService.findAllChanelBend());
-//        model.addAttribute("profiles", profileService.findAllChanelParalel());
-        return "base/profileForAdmin";
+        return "views-base-profileForAdmin";
     }
 
     @RequestMapping(value="/newProfile", method = RequestMethod.POST)
@@ -74,7 +58,7 @@ public class ProfileController {
 
         model.addAttribute("profileForUpdate", profile);
 
-        return "base/updateProfileAll";
+        return "views-base-updateProfileAll";
     }
 
     @RequestMapping(value = "/updateAll/saveUpdateProfile/{id}", method=RequestMethod.POST)
@@ -107,7 +91,7 @@ public class ProfileController {
 
         model.addAttribute("profileForUpdatePrice", profile);
 
-        return "base/updateProfilePrice";
+        return "views-base-updateProfilePrice";
     }
 
     @RequestMapping(value = "/updatePrice/saveUpdateProfilePrice/{id}", method=RequestMethod.POST)

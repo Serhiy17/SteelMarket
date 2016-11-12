@@ -22,12 +22,13 @@ public class PersonController {
     @RequestMapping(value="/registration", method= RequestMethod.GET)
     public String newPersonPage(Model model){
         model.addAttribute("person", new Person());
-        return "base/registration";
+        return "views-base-registration";
     }
 
     @RequestMapping(value="/newPerson", method = RequestMethod.POST)
-    public String newPerson(@ModelAttribute Person person){
+    public String newPerson(@ModelAttribute Person person, @RequestParam String username){
         try {
+            person.setUserame(username);
             personService.save(person);
         }catch(Exception e){
             return "error_username";
@@ -37,7 +38,7 @@ public class PersonController {
 
     @RequestMapping(value="/loginpage", method=RequestMethod.GET)
     public String login(){
-        return "base/loginpage";
+        return "views-base-loginpage";
     }
 
     @RequestMapping(value="/logout", method=RequestMethod.POST)
@@ -53,11 +54,11 @@ public class PersonController {
     @RequestMapping(value = "/saveImage", method = RequestMethod.POST)
     public String saveImage(Principal principal, @RequestParam MultipartFile image){
         personService.saveImage(principal, image);
-        return "base/registration";
+        return "views-base-registration";
     }
     @RequestMapping(value="/loginprocesing", method=RequestMethod.POST)
     public String loginprocesing(){
-        return "redirect:/";
+        return "redirect:/home";
     }
 
     @RequestMapping(value="/getOrder", method=RequestMethod.GET)

@@ -14,23 +14,19 @@
 
 <div style="text-align: center; margin-top: 20%">
 
-    <%--<sec:authorize access="hasRole('ROLE_ADMIN')">--%>
-    <a href="profileForAdmin">металічні профілі адмін</a><br>
-    <%--</sec:authorize>--%>
+    <sec:authorize access="hasRole('ROLE_ADMIN')">
+        <a href="profileForAdmin">металічні профілі адмін</a><br>
+        <a href="orders">замовити</a><br>
+    </sec:authorize>
 
-    <a href="home">Гловна</a>
-    <a href="registration">регістрація</a>
-    <a href="delivery">доставка</a>
-    <a href="contacts">контакти</a>
-    <a href="aboutUs">про нас</a><br>
-    <a href="profileForCastomer">металічні профілі</a><br>
-    <a href="delivery">доставка</a><br>
-    <a href="contacts">контакти</a><br>
-    <a href="aboutUs">про нас</a><br>
-    <a href="orders">замовити</a><br>
+    <sec:authorize access="hasRole('ROLE_USER')">
+        <a href="orders">замовити</a><br>
+    </sec:authorize>
+
 
     <sec:authorize access="!isAuthenticated()">
-        <a href="loginpage">SignUP</a>
+        <a href="loginpage">SignUP</a><br>
+        <a href="registration">Реєстрація</a>
     </sec:authorize>
 
     <sf:form action="logout" method="post">

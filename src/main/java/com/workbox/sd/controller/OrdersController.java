@@ -29,6 +29,7 @@ public class OrdersController {
 //    IBeamAdded, IBeamAngle, IBeamCol, IBeamNorm, IBeamWide,
 //    TBeamCol, TBeamWide, SquarePipe, RectangularPipe, CirclePipe,
 //    ChanelAngle, ChanelBend, ChanelParalel
+
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
     public String newOrdersPage(Model model){
         model.addAttribute("orders", new PieceOfOrder());
@@ -49,7 +50,7 @@ public class OrdersController {
         model.addAttribute("profilesChanelBend", profileService.findByType("ChanelBend"));
         model.addAttribute("profilesChanelParalel", profileService.findByType("ChanelParalel"));
 
-        return "base/orders";
+        return "views-base-orders";
     }
 
     @RequestMapping(value="/newOrders", method = RequestMethod.POST)
@@ -59,10 +60,6 @@ public class OrdersController {
         for(int i=0; i<choosenProfile.length; i++){
             profile = profileService.findOne(Integer.parseInt(choosenProfile[i]));
         }
-
-//        for(int i=0; i<choosenI.length; i++){
-//            profile = profileService.findByType(Integer.parseInt(choosenI[i]));
-//        }
 
         pieceOfOrder.setProfile(profile);
 
