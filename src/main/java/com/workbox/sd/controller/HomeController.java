@@ -13,6 +13,9 @@ public class HomeController {
         return "views-base-home";
     }
 
+    @RequestMapping(value = "/profileForUser", method=RequestMethod.GET)
+    public String profileForUser(){return "views-base-profileForUser";}
+
     @RequestMapping(value = "/delivery", method=RequestMethod.GET)
     public String delivery(){return "views-base-delivery";}
 

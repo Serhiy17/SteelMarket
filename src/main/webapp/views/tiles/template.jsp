@@ -7,11 +7,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Insert title here</title>
-    <link rel="header" href="/resources/css/header.css">
-
-    <spring:url value="/resources/css/header.css" var="headerCss"/>
-    <link rel="header" type="text/css" href="${headerCss}">
-
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/loginpage.css">
+    <link rel="stylesheet" type="text/css" href="/css/registration.css">
+    <link rel="stylesheet" type="text/css" href="/css/profileForAdmin.css">
+    <link rel="stylesheet" type="text/css" href="/css/profileForUser.css">
 
 </head>
 <body>

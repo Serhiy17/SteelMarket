@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <title>PROFILE</title>
@@ -47,7 +47,25 @@
                     <button type="save" class="pure-button pure-button-primary">SAVE</button>
                 </div>
             </fieldset>
-        </sf:form>
+        </sf:form>--%>
+
+        <div class="body"></div>
+        <div class="grad"></div>
+        <div class="header1">
+            <div>Add<span>Profile</span></div>
+        </div>
+        <br>
+        <div class="login">
+            <sf:form action="newProfile" method="post">
+                <input type="text" placeholder="type" name="typeOfProfile" id="name"/><br>
+                <input type="text" placeholder="dimensions" name="dimensions" id="name"/><br>
+                <input type="text" placeholder="weight" name="weight" id="name"/><br>
+                <input type="text" placeholder="length" name="length" id="name"/><br>
+                <input type="text" placeholder="price" name="price" id="name"/><br>
+                <input type="text" placeholder="gost" name="gost" id="name"/><br>
+                <button class = "button">Add</button>
+            </sf:form>
+        </div>
 
         <c:forEach var="prof" items="${profiles}">
             ${prof.typeOfProfile} ${prof.dimensions} ${prof.price}
@@ -57,6 +75,6 @@
             <br>
         </c:forEach>
 
-    </div>
+<%--    </div>
 </body>
-</html>
+</html>--%>

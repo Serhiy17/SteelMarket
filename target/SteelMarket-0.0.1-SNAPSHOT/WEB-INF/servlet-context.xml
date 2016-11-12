@@ -37,5 +37,6 @@
 
     <mvc:annotation-driven/>
     <mvc:resources mapping="/resources/**" location="file:${catalina.home}/resources/"/>
+    <mvc:resources mapping="/css/**" location="/css/"/>
 
 </beans>
