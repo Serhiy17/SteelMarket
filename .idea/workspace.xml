@@ -1,54 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59559856-cd24-4348-84a6-e7ad3c4fafa6" name="Default" comment="31.10.2016 updated classes">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apache-tomcat-8.0.37/webapps/ROOT/WEB-INF/classes/com/workbox/sd/controller/SalingController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apache-tomcat-8.0.37/webapps/ROOT/WEB-INF/classes/com/workbox/sd/controller/SignUpController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/workbox/sd/controller/SalingController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/workbox/sd/controller/SignUpController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/controller/RegistrationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/controller/SalingController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/controller/SignUpController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/views/home.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/views/registration.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/views/saling.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/controller/RegistrationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/controller/SalingController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/controller/SignUpController.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apache-tomcat-8.0.37/webapps/ROOT/WEB-INF/classes/com/workbox/sd/controller/ProfileController.class" afterPath="$PROJECT_DIR$/apache-tomcat-8.0.37/webapps/ROOT/WEB-INF/classes/com/workbox/sd/controller/ProfileController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apache-tomcat-8.0.37/webapps/ROOT/WEB-INF/classes/com/workbox/sd/serviceImpl/PersonServiceImpl.class" afterPath="$PROJECT_DIR$/apache-tomcat-8.0.37/webapps/ROOT/WEB-INF/classes/com/workbox/sd/serviceImpl/PersonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/controller/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/controller/ProfileController.class" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/controller/ProfileController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/entity/Person.class" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/entity/Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/repository/ProfileRepository.class" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/repository/ProfileRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/service/PersonService.class" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/service/PersonService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/service/ProfileService.class" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/service/ProfileService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/serviceImpl/PersonServiceImpl.class" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/serviceImpl/PersonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/serviceImpl/ProfileServiceImpl.class" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/classes/com/workbox/sd/serviceImpl/ProfileServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/com/workbox/sd/controller/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/controller/ProfileController.class" afterPath="$PROJECT_DIR$/target/classes/com/workbox/sd/controller/ProfileController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/entity/Person.class" afterPath="$PROJECT_DIR$/target/classes/com/workbox/sd/entity/Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/repository/ProfileRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/workbox/sd/repository/ProfileRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/service/PersonService.class" afterPath="$PROJECT_DIR$/target/classes/com/workbox/sd/service/PersonService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/service/ProfileService.class" afterPath="$PROJECT_DIR$/target/classes/com/workbox/sd/service/ProfileService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/serviceImpl/PersonServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/workbox/sd/serviceImpl/PersonServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/workbox/sd/serviceImpl/ProfileServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/workbox/sd/serviceImpl/ProfileServiceImpl.class" />
+    <list default="true" id="59559856-cd24-4348-84a6-e7ad3c4fafa6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/header.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/loginpage.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apache-tomcat-8.0.37/webapps/ROOT/WEB-INF/servlet-context.xml" afterPath="$PROJECT_DIR$/apache-tomcat-8.0.37/webapps/ROOT/WEB-INF/servlet-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/workbox/sd/controller/OrdersController.java" afterPath="$PROJECT_DIR$/src/main/java/com/workbox/sd/controller/OrdersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/workbox/sd/controller/PersonController.java" afterPath="$PROJECT_DIR$/src/main/java/com/workbox/sd/controller/PersonController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/workbox/sd/controller/ProfileController.java" afterPath="$PROJECT_DIR$/src/main/java/com/workbox/sd/controller/ProfileController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/workbox/sd/serviceImpl/PersonServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/workbox/sd/serviceImpl/PersonServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/base/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/base/loginpage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/loginpage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/base/orders.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/orders.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/base/registration.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/tiles/template.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/tiles/template.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/servlet-context.xml" afterPath="$PROJECT_DIR$/target/SteelMarket-0.0.1-SNAPSHOT/WEB-INF/servlet-context.xml" />
     </list>
     <ignored path="SteelMarket.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -462,6 +418,36 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SteelMarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SteelMarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -516,6 +502,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SteelMarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SteelMarket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1234,7 +1254,7 @@
       <workItem from="1478039570861" duration="4121000" />
       <workItem from="1478578604350" duration="215000" />
       <workItem from="1478900766070" duration="9795000" />
-      <workItem from="1478932870687" duration="6659000" />
+      <workItem from="1478932870687" duration="6854000" />
     </task>
     <task id="LOCAL-00001" summary="22.10.2016 jsp">
       <created>1477097162803</created>
@@ -1299,15 +1319,22 @@
       <option name="project" value="LOCAL" />
       <updated>1478578793643</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="12.11.2016 updated classes">
+      <created>1478943924310</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1478943924310</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142153000" />
+    <option name="totallyTimeSpent" value="142348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1216" height="1044" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1325,7 +1352,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27897352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27897352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1377,7 +1404,8 @@
     <MESSAGE value="30.10.2016 updated classes again" />
     <MESSAGE value="31.10.2016 updated classes" />
     <MESSAGE value="08.11.2016 titels" />
-    <option name="LAST_COMMIT_MESSAGE" value="08.11.2016 titels" />
+    <MESSAGE value="12.11.2016 updated classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.11.2016 updated classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1657,6 +1685,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="182" column="16" selection-start-line="182" selection-start-column="16" selection-end-line="182" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
