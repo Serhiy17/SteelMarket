@@ -11,7 +11,8 @@
 <div>
 
     <div class = "one">
-        <div class = "photo"><a href=""><img src="Images/Арматура.jpg", width="200px", height="200px"></a></div>
+        <div class = "photo"><a href=""><img src="Images/Арматура.jpg",
+                                             width="200px", height="200px"></a></div>
         <div class = "reference"><a href="">Арматура</a></div>
     </div>
 

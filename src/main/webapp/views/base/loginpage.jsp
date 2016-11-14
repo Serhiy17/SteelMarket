@@ -17,7 +17,7 @@
 <div class="body"></div>
 <div class="grad"></div>
 <div class="header1">
-    <div>Please<span>Enter</span></div>
+    <div>Please<span> Enter</span></div>
 </div>
 <br>
 <div class="login">

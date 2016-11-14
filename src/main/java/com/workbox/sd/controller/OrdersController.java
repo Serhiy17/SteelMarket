@@ -1,8 +1,10 @@
 package com.workbox.sd.controller;
 
+import com.workbox.sd.entity.Person;
 import com.workbox.sd.entity.PieceOfOrder;
 import com.workbox.sd.entity.Profile;
 import com.workbox.sd.service.OrdersService;
+import com.workbox.sd.service.PersonService;
 import com.workbox.sd.service.PieceOfOrderService;
 import com.workbox.sd.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.security.Principal;
 
 @Controller
 public class OrdersController {
@@ -24,6 +30,9 @@ public class OrdersController {
 
     @Autowired
     private ProfileService profileService;
+
+    @Autowired
+    private PersonService personService;
 
 //    Rebar, LProfileEquilateral, LProfileNonEquilateral,
 //    IBeamAdded, IBeamAngle, IBeamCol, IBeamNorm, IBeamWide,
@@ -54,17 +63,18 @@ public class OrdersController {
     }
 
     @RequestMapping(value="/newOrders", method = RequestMethod.POST)
-    public String newOrders(@ModelAttribute PieceOfOrder pieceOfOrder,
-                            @RequestParam String[] choosenProfile){
-        Profile profile = null;
-        for(int i=0; i<choosenProfile.length; i++){
-            profile = profileService.findOne(Integer.parseInt(choosenProfile[i]));
-        }
+    public String newOrders(HttpServletRequest request, HttpServletResponse response,
+                            Principal principal, @ModelAttribute PieceOfOrder pieceOfOrder, Model model,
+                            @RequestParam String choosenProfile){
+        Profile profile = profileService.findOne(Integer.parseInt(choosenProfile));
 
-        pieceOfOrder.setProfile(profile);
+        response.addCookie(ordersService.intoBasket(Integer.parseInt(choosenProfile), request, response));
 
-        pieceOfOrderService.save(pieceOfOrder);
+        Person person = personService.findOne(Integer.parseInt(principal.getName()));
+
+        model.addAttribute("person",person);
 
         return "redirect:/orders";
+
     }
 }

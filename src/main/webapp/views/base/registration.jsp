@@ -5,7 +5,7 @@
     <div class="body"></div>
     <div class="grad"></div>
     <div class="header1">
-        <div>Your<span>Registration</span></div>
+        <div>Your<span> Registration</span></div>
     </div>
     <br>
     <div class="login">

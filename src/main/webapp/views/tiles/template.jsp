@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="/css/registration.css">
     <link rel="stylesheet" type="text/css" href="/css/profileForAdmin.css">
     <link rel="stylesheet" type="text/css" href="/css/profileForUser.css">
+    <link rel="stylesheet" type="text/css" href="/css/profileForUser.css">
+    <link rel="stylesheet" type="text/css" href="/css/profileForUser.css">
 
 </head>
 <body>

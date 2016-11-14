@@ -52,7 +52,7 @@
         <div class="body"></div>
         <div class="grad"></div>
         <div class="header1">
-            <div>Add<span>Profile</span></div>
+            <div>Add<span> Profile</span></div>
         </div>
         <br>
         <div class="login">
@@ -67,13 +67,16 @@
             </sf:form>
         </div>
 
-        <c:forEach var="prof" items="${profiles}">
-            ${prof.typeOfProfile} ${prof.dimensions} ${prof.price}
-            <a href="del/${prof.id}">delete</a>
-            <a href="updateAll/${prof.id}">update</a>
-            <a href="updatePrice/${prof.id}">change price</a>
-            <br>
-        </c:forEach>
+        <div style="text-align: center; margin-top: 30px">
+
+            <c:forEach var="prof" items="${profiles}">
+                ${prof.typeOfProfile} ${prof.dimensions} ${prof.price}
+                <a href="del/${prof.id}">delete</a>
+                <a href="updateAll/${prof.id}">update</a>
+                <a href="updatePrice/${prof.id}">change price</a>
+                <br>
+            </c:forEach>
+        </div>
 
 <%--    </div>
 </body>
