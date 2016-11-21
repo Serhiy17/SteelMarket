@@ -24,6 +24,7 @@ public class ProfileController {
 
     @RequestMapping(value="/profileForAdmin", method= RequestMethod.GET)
     public String profilePage(Model model){
+        model.addAttribute("profiles", profileService.findAll());
         return "views-base-profileForAdmin";
     }
 

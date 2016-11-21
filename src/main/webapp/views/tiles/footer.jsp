@@ -1,3 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
-<h1 style="text-align: center; background-color: grey">Footer</h1>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"%>
+
+<p style="text-align: right;
+    background-color: #ffffff;
+    padding-right: 50px;
+    font-family: 'Exo', sans-serif;
+    font-size: 15px;">made by Serhiy Dudynsky<p>

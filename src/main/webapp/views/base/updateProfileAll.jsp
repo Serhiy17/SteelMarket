@@ -6,18 +6,18 @@
     <div class="body"></div>
     <div class="grad"></div>
     <div class="header1">
-        <div>Add<span> Profile</span></div>
+        <div>Update<span> Profile</span></div>
     </div>
     <br>
     <div class="login">
         <sf:form action="saveUpdateProfile/${profileForUpdate.id}" method="post">
-            <sf:input type="text" placeholder="type" value="${profileForUpdate.typeOfProfile}" path="newTypeOfProfile" id="name"/><br>
-            <sf:input type="text" placeholder="dimensions" value="${profileForUpdate.dimensions}" path="newDimensions" id="name"/><br>
-            <sf:input type="text" placeholder="weight" value="${profileForUpdate.weight}" path="newWeight" id="name"/><br>
-            <sf:input type="text" placeholder="length"  value="${profileForUpdate.length}" path="newLength" id="name"/><br>
-            <sf:input type="text" placeholder="price" value="${profileForUpdate.price}" path="newPrice" id="name"/><br>
-            <sf:input type="text" placeholder="gost" value="${profileForUpdate.gost}" path="newGost" id="name"/><br>
-            <sf:button class = "button">Change</sf:button>
+            <input type="text" placeholder="type" value="${profileForUpdate.typeOfProfile}" name="newTypeOfProfile" id="name"/><br>
+            <input type="text" placeholder="dimensions" value="${profileForUpdate.dimensions}" name="newDimensions" id="name"/><br>
+            <input type="text" placeholder="weight" value="${profileForUpdate.weight}" name="newWeight" id="name"/><br>
+            <input type="text" placeholder="length"  value="${profileForUpdate.length}" name="newLength" id="name"/><br>
+            <input type="text" placeholder="price" value="${profileForUpdate.price}" name="newPrice" id="name"/><br>
+            <input type="text" placeholder="gost" value="${profileForUpdate.gost}" name="newGost" id="name"/><br>
+            <button class = "button">Update</button>
         </sf:form>
     </div>
 

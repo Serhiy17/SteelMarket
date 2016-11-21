@@ -67,7 +67,7 @@
             </sf:form>
         </div>
 
-        <div style="text-align: center; margin-top: 30px">
+        <div class="login"; style="text-align: center; margin-top: 30px">
 
             <c:forEach var="prof" items="${profiles}">
                 ${prof.typeOfProfile} ${prof.dimensions} ${prof.price}

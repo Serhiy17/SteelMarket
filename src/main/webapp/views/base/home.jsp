@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<sec:authentication property="name"/>
+<%--<sec:authentication property="name"/>--%>
 
 <div style="text-align: center; margin-top: 20%">
 
@@ -29,9 +29,11 @@
         <a href="registration">Реєстрація</a>
     </sec:authorize>
 
+<%--
     <sf:form action="logout" method="post">
         <button>SignOUT</button>
     </sf:form>
+--%>
 
 
 </div>

@@ -1,8 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-
-
-<header>
-    <nav> <a href="home">Головна</a> <a href="profileForUser">Профілі</a> <a href="delivery">Доставка</a> <a href="aboutUs">Про Нас</a>
-        <a href="contacts">Контакти</a>  <a href="loginpage">Увійти</a> <button>Вийти</button></nav>
-</header>
-
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
+<div class="header">
+    <span>
+        <a href="home">ГОЛОВНА</a>
+        <a href="profileForUser">ПРОФІЛІ</a>
+        <a href="delivery">ДОСТАВКА</a>
+        <a href="aboutUs">ПРО НАС</a>
+        <a href="contacts">КОНТАКТИ</a>
+        <a href="loginpage">УВІЙТИ</a>
+        <sf:form action="logout" method="post">
+            <button>ВИЙТИ</button>
+        </sf:form>
+    </span>
+</div>
