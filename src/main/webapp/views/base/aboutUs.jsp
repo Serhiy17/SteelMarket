@@ -1,16 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>About our ofice</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-</head>
-<body>
-
-<div style="text-align: center; margin: 10% auto; width: 800px;">
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header3">
 
     <h1>Про нашу компанію</h1>
     <p>Компанія Львів-Метал займається продажем і реалізацією будь-яких видів металопрокату.
@@ -33,5 +26,4 @@
         можете знайти.</p>
 
 </div>
-</body>
-</html>
+

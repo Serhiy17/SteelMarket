@@ -1,16 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>Delivery</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-</head>
-<body>
 
-<div style="text-align: center; margin: 10% auto; width: 800px;">
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header3">
 
     <h1>Доставка металопрокату</h1>
     <p>Наша компанія надає повний перелік послуг з доставки металопрокату,
@@ -37,5 +31,4 @@
         здійснюються після оформлення договору поставки.</p>
 
 </div>
-</body>
-</html>
+
