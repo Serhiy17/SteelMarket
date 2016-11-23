@@ -16,6 +16,12 @@ public interface PersonService {
 
     void delete(int id);
 
+    Person findByUsername(String username);
+
+    Person findBySurname(String surName);
+
+    Person findByEmail(String email);
+
     void saveImage (Principal principal, MultipartFile multipartFile);
 
 }

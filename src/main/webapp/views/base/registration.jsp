@@ -10,19 +10,20 @@
     <br>
     <div class="login">
         <sf:form modelAttribute="person" action="newPerson" method="post">
+
+            <sf:errors path = "username"/>
+            <sf:errors path = "surname"/>
+            <sf:errors path = "email"/>
+
             <input type="text" placeholder="name" name="username" id="name"/><br>
             <sf:input type="text" placeholder="surname" path="surName" id="name"/><br>
             <sf:input type="email" placeholder="email" path="email" id="name"/><br>
             <sf:input type="phone" placeholder="phone" path="phone" id="name"/><br>
             <sf:input type="password" placeholder="password" path="password" id="name"/><br>
             <button class = "button">Registration</button>
+
         </sf:form>
     </div>
-
-<%--    ${person.getOriginUsername()}
-
-    <br>
-    <img src="${person.pathImage}" height="100px" width="200px">--%>
 
     <sf:form action="./saveImage?${_csrf.parameterName}=${_csrf.token}"
                method="post" enctype="multipart/form-data">

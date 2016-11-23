@@ -57,6 +57,24 @@ public class PersonServiceImpl implements PersonService, UserDetailsService{
         return personRepository.findByUsername(username);
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+    public Person findByUsername(String username){
+        return personRepository.findByUsername(username);
+    }
+
+    @Override
+    public Person findBySurname(String surName) {
+        return personRepository.findBySurname(surName);
+    }
+
+    @Override
+    public Person findByEmail(String email) {
+        return personRepository.findByEmail(email);
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+
     @Override
     public void saveImage(Principal principal, MultipartFile multipartFile){
 

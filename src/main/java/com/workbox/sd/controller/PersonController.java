@@ -2,15 +2,16 @@ package com.workbox.sd.controller;
 
 import com.workbox.sd.entity.Person;
 import com.workbox.sd.service.PersonService;
+import com.workbox.sd.validator.PersonValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.security.Principal;
 
 @Controller
@@ -19,6 +20,11 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
+    @InitBinder
+    protected void initBinder(WebDataBinder binder){
+        binder.setValidator(new PersonValidator(personService));
+    }
+
     @RequestMapping(value="/registration", method= RequestMethod.GET)
     public String newPersonPage(Model model){
         model.addAttribute("person", new Person());
@@ -26,7 +32,12 @@ public class PersonController {
     }
 
     @RequestMapping(value="/newPerson", method = RequestMethod.POST)
-    public String newPerson(@ModelAttribute Person person, @RequestParam String username){
+    public String newPerson(@ModelAttribute @Valid Person person, @RequestParam String username
+                            , BindingResult bindingResult){
+
+        if(bindingResult.hasErrors()){
+            return "views-base-registration";
+        }
         try {
             person.setUserame(username);
             personService.save(person);
@@ -35,6 +46,16 @@ public class PersonController {
         }
         return "redirect:/";
     }
+
+/*    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public String signUp(@ModelAttribute @Valid User user, BindingResult bindingResult) {
+
+        if(bindingResult.hasErrors()){
+            return "registration";
+        }
+        userService.save(user);
+        return "redirect:/home";
+    }*/
 
     @RequestMapping(value="/loginpage", method=RequestMethod.GET)
     public String login(){
