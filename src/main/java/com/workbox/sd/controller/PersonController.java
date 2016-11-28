@@ -32,30 +32,18 @@ public class PersonController {
     }
 
     @RequestMapping(value="/newPerson", method = RequestMethod.POST)
-    public String newPerson(@ModelAttribute @Valid Person person, @RequestParam String username
-                            , BindingResult bindingResult){
+    public String newPerson(@ModelAttribute @Valid Person person, @RequestParam String username,
+                            BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){
             return "views-base-registration";
         }
-        try {
-            person.setUserame(username);
-            personService.save(person);
-        }catch(Exception e){
-            return "error_username";
-        }
+
+        person.setUserame(username);
+        personService.save(person);
+
         return "redirect:/";
     }
-
-/*    @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String signUp(@ModelAttribute @Valid User user, BindingResult bindingResult) {
-
-        if(bindingResult.hasErrors()){
-            return "registration";
-        }
-        userService.save(user);
-        return "redirect:/home";
-    }*/
 
     @RequestMapping(value="/loginpage", method=RequestMethod.GET)
     public String login(){

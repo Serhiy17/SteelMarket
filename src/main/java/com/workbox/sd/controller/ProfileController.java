@@ -2,19 +2,25 @@ package com.workbox.sd.controller;
 
 import com.workbox.sd.entity.Profile;
 import com.workbox.sd.service.ProfileService;
+import com.workbox.sd.validator.PersonValidator;
+import com.workbox.sd.validator.ProfileValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ProfileController {
 
     @Autowired
     private ProfileService profileService;
+
+    @InitBinder
+    protected void initBinder(WebDataBinder binder){
+        binder.setValidator(new ProfileValidator(profileService));
+    }
 
 
 //    Rebar, LProfileEquilateral, LProfileNonEquilateral,
@@ -34,7 +40,12 @@ public class ProfileController {
                               @RequestParam String weight,
                               @RequestParam String length,
                               @RequestParam String price,
-                              @RequestParam String gost){
+                              @RequestParam String gost,
+                              BindingResult bindingResult){
+
+        if(bindingResult.hasErrors()){
+            return "views-base-profileForAdmin";
+        }
 
         profileService.save(new Profile(typeOfProfile, dimensions, Double.parseDouble(weight),
                                 Double.parseDouble(length), Double.parseDouble(price), gost));

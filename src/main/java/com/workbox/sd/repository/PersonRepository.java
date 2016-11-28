@@ -7,7 +7,7 @@ public interface PersonRepository extends JpaRepository<Person, Integer>{
 
     Person findByUsername(String username);
 
-    Person findBySurname(String surName);
+    Person findBySurName(String surName);
 
     Person findByEmail(String email);
 

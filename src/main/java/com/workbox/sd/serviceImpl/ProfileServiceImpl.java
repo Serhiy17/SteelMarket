@@ -35,4 +35,30 @@ public class ProfileServiceImpl implements ProfileService {
     public List<Profile> findByType(String type) {
         return profileRepository.findAllByType(type);
     }
+
+    @Override
+    public Profile findByTypeOfProfile(String typeOfProfile){
+        return profileRepository.findByTypeOfProfile(typeOfProfile);
+    }
+
+    @Override
+    public Profile findByDimensions(String dimensions){
+        return profileRepository.findByDimensions(dimensions);
+    }
+
+    @Override
+    public Profile findByWeight(double weight){
+        return profileRepository.findByWeight(weight);
+    }
+
+    @Override
+    public Profile findByLength(double length){
+        return profileRepository.findByLength(length);
+    }
+
+    @Override
+    public Profile findByGost(String gost){
+        return profileRepository.findByGost(gost);
+    }
+
 }

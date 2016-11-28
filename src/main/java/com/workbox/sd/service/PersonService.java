@@ -18,7 +18,7 @@ public interface PersonService {
 
     Person findByUsername(String username);
 
-    Person findBySurname(String surName);
+    Person findBySurName(String surName);
 
     Person findByEmail(String email);
 

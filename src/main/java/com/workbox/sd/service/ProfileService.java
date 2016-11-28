@@ -15,4 +15,15 @@ public interface ProfileService {
     void delete(int id);
 
     List<Profile> findByType(String type);
+
+    Profile findByTypeOfProfile(String typeOfProfile);
+
+    Profile findByDimensions(String dimensions);
+
+    Profile findByWeight(double weight);
+
+    Profile findByLength(double length);
+
+    Profile findByGost(String gost);
+
 }

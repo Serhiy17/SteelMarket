@@ -12,7 +12,7 @@
         <sf:form modelAttribute="person" action="newPerson" method="post">
 
             <sf:errors path = "username"/>
-            <sf:errors path = "surname"/>
+            <sf:errors path = "surName"/>
             <sf:errors path = "email"/>
 
             <input type="text" placeholder="name" name="username" id="name"/><br>

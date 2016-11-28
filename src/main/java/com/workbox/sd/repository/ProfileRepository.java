@@ -12,4 +12,14 @@ public interface ProfileRepository extends JpaRepository<Profile, Integer>{
     @Query("select d from Profile d where d.typeOfProfile =:type")
     List<Profile> findAllByType(@Param(value="type") String type);
 
+    Profile findByTypeOfProfile(String typeOfProfile);
+
+    Profile findByDimensions(String dimensions);
+
+    Profile findByWeight(double weight);
+
+    Profile findByLength(double length);
+
+    Profile findByGost(String gost);
+
 }

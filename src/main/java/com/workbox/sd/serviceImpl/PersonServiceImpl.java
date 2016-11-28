@@ -64,8 +64,8 @@ public class PersonServiceImpl implements PersonService, UserDetailsService{
     }
 
     @Override
-    public Person findBySurname(String surName) {
-        return personRepository.findBySurname(surName);
+    public Person findBySurName(String surName) {
+        return personRepository.findBySurName(surName);
     }
 
     @Override

@@ -23,18 +23,10 @@ public class PersonValidator implements Validator {
     public void validate(Object o, Errors errors) {
         Person person = (Person) o;
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "", "email can't be empty");
-        if(personService.findByEmail(person.getEmail()) != null){
+        if(personService.findByEmail(person.getEmail()) != null) {
             errors.rejectValue("email", "", "email already exist");
         }
-
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "", "username can't be empty");
-/*        if(personService.findByUsername(person.getOriginUsername()) != null){
-            errors.rejectValue("username", "", " username already exist");
-        }*/
-
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "surName", "", "surName can't be empty");
-/*        if(personService.findBySurname(person.getSurName()) != null){
-            errors.rejectValue("surname", "", " surname already exist");
-        }*/
     }
 }
